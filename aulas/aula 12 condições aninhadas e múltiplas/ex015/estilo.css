@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(144, 152, 161);
+    font: normal 15pt Arial;
+    
+}
+header{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 18px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.445);
+}
+img#foto{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+input#botão{
+    font-size: 16px;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 40px;
+    font-size: 18px;
+}

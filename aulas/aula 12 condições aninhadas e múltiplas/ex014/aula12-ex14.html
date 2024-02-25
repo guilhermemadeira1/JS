@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercíco</title>
+    <link rel="stylesheet" href="estilo.css">
+
+    <style>
+        div#manha{
+            visibility: hidden;
+        }
+        div#tarde{
+           visibility: hidden;
+        }
+        div#noite{
+           visibility: hidden;
+        }
+
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+ 
+    <section>
+        <div id="mensagem">
+            Mensagem
+        </div>
+
+        <div id="manha">
+            <img src="manha.png" 
+            alt="foto do dia" >
+        </div>
+
+        <div id="tarde">
+            <img src="tarde.png" alt="foto da tarde">
+        </div>
+
+        <div id="noite">
+            <img src="noite.png" alt="foto da noite">
+        </div>
+
+    </section>
+
+    <footer>
+        <p><EM>&copy; CursoemVídeo.</EM></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

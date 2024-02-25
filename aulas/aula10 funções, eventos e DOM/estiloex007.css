@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body{
+    font: normal 15pt Arial;
+    color:rgb(21, 21, 83);
+    background-color: rgb(175, 146, 255);
+    text-align: center;
+}
+h1{
+    background:rgb(206, 206, 255) ;
+}
+input{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+div#resposta{
+    color:rgb(255, 255, 255);
+    font-family: serif;
+    margin-top: 30px;
+  
+}
+input#botão{
+    margin-top: 40px;
+    width: 52px;
+    height: 25px;
+}

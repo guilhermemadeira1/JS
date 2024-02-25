@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou ímpar</title>
+</head>
+<body>
+    <h1>Par ou ímpar</h1>
+    <p>Veja se é par ou ímpar<input type="number" name="" id="valor"></p>
+
+    <input type="button" value="verificar" id="bot" onclick="parimp()">
+
+    <div id="res">Resultado: </div>
+
+    <script>
+        var vtxt = document.querySelector('input#valor')
+        var val = Number(vtxt.value)
+        var r = document.getElementById('res')
+        var botão = document.querySelector('input#bot')
+    
+        function parimp(n){
+
+            if(vtxt.value==0){
+                r.innerHTML =``
+            }
+            if(n%2==0){
+                return 'par'
+            }
+            else{
+                return 'ímpar'
+            }
+        }
+         let retorno = parimp(val)
+         r.innerHTML = `O valor é ${retorno}`
+
+         
+    </script>
+</body>
+
+</html>

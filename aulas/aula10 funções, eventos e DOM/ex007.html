@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <link rel="stylesheet" href="estiloex007.css">
+
+</head>
+<body>
+    <h1>Somando valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2"> =
+
+    <div id= "resposta" onmouseenter="entrar()" onmouseout="sair()">RESPOSTA</div>
+
+    <input type="button" id="botão" value="somar" onclick="somar()">
+
+    <script>
+
+        var resp = window.document.querySelector('div#resposta')
+        resp.addEventListener('click',somar)
+        /* O método.addEventListener('evento',função) adiciona o evento 'click' ou onclick que ativará a funcão somar*/
+
+        var txt = window.document.getElementById('resposta')
+
+    function somar(){
+
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.querySelector('input#txtn2')
+        var resp = window.document.querySelector('div#resposta')
+        
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var soma = n1 + n2
+
+        resp.innerHTML= `RESULTADO: ${soma}`
+
+    }
+    function entrar(){
+    txt.innerText='Adicione os valores'
+    txt.style.color= 'red'
+
+    }
+    function sair(){
+    txt.innerText='RESPOSTA'
+    txt.style.color= 'white'
+
+    }
+
+
+    </script>
+</body>
+</html>

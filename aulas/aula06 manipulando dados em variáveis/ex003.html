@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+        background-color:rgb(95, 95, 255);
+        color:rgb(255, 66, 66);
+        font: normal 15pt Arial;
+    }
+    p{color:rgb(52, 238, 77);
+        font: normal 15pt Arial;
+    }
+     /*todo comentário em css*/
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1> <!--comentário em html-->
+    <p>Olá, meu nome é Guilherme.</p>
+    <h1>Título 2</h1>
+    <p>Segundo parágrafo</p>
+
+
+   <script>
+    //comentário em JS
+    /*comentário em JS*/ 
+    var n1 = window.prompt('Digite um número') /*O window.prompt só armazena strings, aqui o número vira string.*/  
+    var n2 = window.prompt('Digite outro número')
+    var s = Number.parseInt(n1) + Number(n2) //O comando Number.parseInt() converte o item da variável em número inteiro. O Number() converte a string em inteiro se for inteiro e float se for real.
+
+    window.alert('O resultado da soma é '+ s)
+    //O comando Number.parseInt() converte o item da variável em número inteiro. O Number() converte a string em inteiro se for inteiro e float se for real.
+    //Os valores não podem ser somados pois são string, o + irá concatenar os dois valores como string.
+     //O + pode sevir tanto pra somar númreros quanto concatenar/juntar strings.
+
+     window.alert('Fazer outra operação?')
+    var N1= window.prompt('Número1')
+    var N2= window.prompt('Número2')
+    var SOMA = Number.parseInt(N1)+Number.parseInt(N2)
+    window.alert(`Somando ${N1} e ${N2}, temos: ${SOMA}`)
+   </script>
+   
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<meta http-equiv="refresh" content="2.0">Atualizar a cada 2 segundos-->
+
+   <style>
+    body{background-color: rgb(130, 130, 247);
+    color: white;
+    font: normal 10pt Arial;
+    }
+   </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+ 
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <abbr title="Document Object Model"><strong>DOM</strong></abbr> em JavaScript.</h2>
+   
+    <p>DOM <EM>Document Object Model</EM> é um Modelo de Objetos para Documentos, ou seja, é um agrupamengo de objetos que compõem o site. </p>
+   <p>Não funciona no Nodejs, DOM está presente quando rodamos o JavaScript no Navegador.</p>
+
+   <div id="msg"><p>clique em mim</p></div>
+   <br>
+   <script>
+    var corpo = window.document.body
+    var p1 = window.document.getElementsByTagName('p')[1]
+    p1.style.color= 'red'
+
+    var d= window.document.getElementById('msg')[0]
+    d.innerText('NÂO clique em mim')
+    
+    window.document.querySelectorAll()
+    /*primeiro parágrafo é 0*/
+
+    //window.document.write('No parágrafo 1 está escrito: '+p1.innerText)
+    //innerText mostra o texto dentro do parágrafo
+    
+    //corpo.style.background='black'
+
+
+    //var d = window.document.getElementById('mensagem')
+    //var d = window.document.getElementsByName('msg')[0]
+
+    //var d = window.document.getElementsByClassName('msg')
+
+    //var d = window.document.querySelector('div.msg')
+   // d.style.color='blue'
+    
+    //d.style.background='green'
+   
+    //document.write(p1.innerHTML)
+    //.innerText escreve o texto sem formatação, já o .innerHTML escreve o texto + a formatação.
+
+
+
+
+
+
+
+
+
+
+    /*window.document.write('Olá mundo<br>')
+    window.document.write(`${window.document.charset}<br>`)
+
+    window.document.write(`${window.document.URL}<br>`)
+
+    window.document.write(`${window.document.title}`)*/
+    
+
+   </script>
+</body> 
+
+</html>

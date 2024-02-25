@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font: normal 14px cursive;
+            text-align: center;
+            color:darkslategray;
+        }
+        input{
+            margin-top: 50px;
+            text-align: center;
+        
+        }
+        
+        div#nom{
+            margin-top: 50px;
+            font: normal 20px cursive;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        div#resposta{
+            margin-top: 30px;
+            font: normal 20px cursive;
+            margin-bottom: 50px;
+        }
+       
+        h1{
+            background: rgb(122, 237, 252)
+        }
+        h2{
+            margin-top: 40px;
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <h1>De que país você é?</h1>
+    <h2>Digite seu nome e seu país de origem</h2>
+   
+    Nome: <input type="text" name="seunome" id="seunome">
+
+    <input type="button" value="enviar"
+    id="env1" onclick="nome()">
+
+    País: <input type="text" name="país" id="país">
+
+    <input type="button" value="enviar" onclick="país()" id="env2">
+
+    <input type="button" value="limpar" onclick="limpar()">
+
+    <div id="nom"> </div>
+    <div id="resposta"> </div>
+
+    
+    <img src="https://static.escolakids.uol.com.br/conteudo_legenda/a88c451eac78f47df1abba1e11b96171.jpg" alt="países">
+
+    <script>
+
+      var nom = document.querySelector('div#nom')
+      var res = document.querySelector('div#resposta')
+      
+
+     function nome(){
+
+       var n = document.querySelector('input#seunome')
+       var nome = String(n.value)
+       nom.innerHTML= `Olá, ${nome}!`
+    }
+
+     function país(){
+      
+        var p = document.querySelector('input#país')
+        var país = String(p.value)
+
+        if (país == 'Brasil'){
+            res.innerHTML= 'Você é Brasileiro!!'
+        }else{
+            res.innerHTML=`Você nasceu em ${país}!`
+        }
+     }
+
+     function limpar(){
+        res.innerHTML=''
+        nom.innerHTML=''
+     }
+
+    </script>
+</body>
+</html>

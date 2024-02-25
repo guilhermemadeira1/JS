@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <main>
+        <p>1° número<input type="number" id="num1"></p>
+        <p>2° número<input type="number" id="num2"></p>
+
+        <input type="button" value="+" onclick="somar()">
+        <input type="button" value="-" onclick="subtrair()">
+        <input type="button" value="/" onclick="divisão()">
+        <input type="button" onclick="x">
+        
+        <div id="res"></div>
+    </main>
+    <script>
+        var num1 = document.querySelector("input#num1")
+        var num2 = document.querySelector("input#num2")
+        var res = document.querySelector("div#res")
+
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+        function somar(){
+            let soma = n1+n2
+
+            res.innerHTML = `A soma de ${n1} e ${n2} é ${soma}`
+        }
+
+        function subtrair(){
+
+        }
+
+        function divisão(){
+
+        }
+
+    </script>
+</body>
+</html>
