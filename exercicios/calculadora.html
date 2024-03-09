@@ -4,43 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício</title>
+    <title>Calculadora</title>
+
+    <style>
+        :root{
+            --azul(#0B74AC);
+            --azulClaro(#17c6dd);
+            --preto( #00000096);
+            --(#fdd90a);
+        }
+        body{
+            text-align: center;
+            color: #ffff;
+            text-shadow: 2px 2px 3px black;
+            background-image: linear-gradient(to left, #0B74AC, #17c6dd);
+
+            font: normal 15px monospace;
+        }
+        .num{
+            text-align: center;
+            border-style: hidden;
+            box-shadow: 2px 2px 3px #00000062;
+            width: 50px;
+            height: 30px;
+            margin: 10px;
+
+        }
+        .botao{
+            background-color: #ffff;
+            border-style: hidden;
+            box-shadow: 2px 2px 3px #00000062;
+            width: 50px;
+        }
+        .botao:hover{
+            background-color: #fdd90a;
+        }
+        #res{
+            margin-top: 10%;
+            font: normal 20px monospace;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Calculadora</h1>
     </header>
     <main>
-        <p>1° número<input type="number" id="num1"></p>
-        <p>2° número<input type="number" id="num2"></p>
+        <p>1° número<input type="number" id="num1" class="num"></p>
+        <p>2° número<input type="number" id="num2" class="num"></p>
 
-        <input type="button" value="+" onclick="somar()">
-        <input type="button" value="-" onclick="subtrair()">
-        <input type="button" value="/" onclick="divisão()">
-        <input type="button" onclick="x">
+        <input type="button" value="+" onclick="somar()" class="botao">
+        <input type="button" value="-" onclick="subtrair()" class="botao">
+        <input type="button" value="/" onclick="divisao()" class="botao">
+        <input type="button" value="x" onclick="multiplicacao()"class="botao">
         
         <div id="res"></div>
     </main>
     <script>
-        var num1 = document.querySelector("input#num1")
-        var num2 = document.querySelector("input#num2")
-        var res = document.querySelector("div#res")
-
-            var n1 = Number(num1.value)
-            var n2 = Number(num2.value)
+        let res = document.querySelector("div#res")
 
         function somar(){
+            let num1 = document.querySelector("input#num1")
+            let num2 = document.querySelector("input#num2")
+
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+
             let soma = n1+n2
+            res.innerHTML = `${n1} + ${n2} = ${soma}`
 
-            res.innerHTML = `A soma de ${n1} e ${n2} é ${soma}`
+            if (!num1.value || !num2.value){//se as caixas de entrada não tiverem valores
+                res.innerHTML = "Valores faltando"
+
+            }
         }
-
         function subtrair(){
+            let num1 = document.querySelector("input#num1")
+            let num2 = document.querySelector("input#num2")
+
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+            let sub = n1-n2
+            res.innerHTML = `${n1} - ${n2} = ${sub}`
+
+            if (!num1.value || !num2.value){
+                res.innerHTML = "Valores faltando"
+
+            }
+        }
+        function divisao(){
+            let num1 = document.querySelector("input#num1")
+            let num2 = document.querySelector("input#num2")
+
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+            let div = n1/n2
+            res.innerHTML = `${n1} / ${n2} = ${div}`
+
+            if (!num1.value || !num2.value){
+                res.innerHTML = "Valores faltando"
+
+            }
 
         }
+        function multiplicacao(){
+            let num1 = document.querySelector("input#num1")
+            let num2 = document.querySelector("input#num2")
 
-        function divisão(){
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+            let mult = n1*n2
+            res.innerHTML= `${n1} x ${n2} = ${mult}`
 
+            if (num1.value.length ==0 || num2.value.length == 0){
+                res.innerHTML = "Valores faltando"
+
+            }
         }
 
     </script>
